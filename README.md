@@ -2,6 +2,9 @@
 
 The implementation of data structures (using Golang)
 
+- Linked List
+- Queue
+
 ## Linked List
 
 The linked list provides these methods:
@@ -22,3 +25,18 @@ The linked list provides these methods:
 
 `Head()` : returns the first node, so we can iterate on it
 
+## Queue
+
+The queue provides these methods:
+
+`New()` : creates a new ItemQueue
+
+`EnQueue(t Item)` : adds an Item to the end of the queue
+
+`Dequeue()` : removes an Item from the start of the queue
+
+`Front()` : returns the item next in the queu, without removing it
+
+`IsEmpty()` : returns true if the queue is empty
+
+`Size()` : returns the number of Items in the queue
