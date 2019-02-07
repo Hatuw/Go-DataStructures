@@ -1,3 +1,4 @@
+// Package linkedlist creates a ItemLinkedList data structure for ite Item type
 package linkedlist
 
 import (

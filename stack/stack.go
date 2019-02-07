@@ -1,3 +1,4 @@
+// Package stack creates a ItemStack data structure for Item type
 package stack
 
 import (
