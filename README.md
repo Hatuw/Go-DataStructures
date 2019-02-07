@@ -4,6 +4,7 @@ The implementation of data structures (using Golang)
 
 - Linked List
 - Queue
+- Stack
 
 ## Linked List
 
@@ -40,3 +41,11 @@ The queue provides these methods:
 `IsEmpty()` : returns true if the queue is empty
 
 `Size()` : returns the number of Items in the queue
+
+## Stack
+
+`New()` : creates a new ItemStack
+
+`Push(t Item)` : adds an Item to the top of the stack
+
+`Pop()` : removes an Item from the top of the stack
