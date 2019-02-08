@@ -5,6 +5,7 @@ The implementation of data structures (using Golang)
 - Linked List
 - Queue
 - Stack
+- Set
 
 ## Linked List
 
@@ -49,3 +50,17 @@ The queue provides these methods:
 `Push(t Item)` : adds an Item to the top of the stack
 
 `Pop()` : removes an Item from the top of the stack
+
+## Set
+
+`Add(t Item)` : adds a new element to the Set
+
+`Clear()` : removes all elements from the Set
+
+`Delete(item Item)` : removes the Item from the Set and returns Has(Item)
+
+`Has(item Item)` : returns true if the Set contains the Item
+
+`Items()` : returns the Item(s) stored
+
+`Size()` : returns the size of the set
