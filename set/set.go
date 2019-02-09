@@ -13,7 +13,7 @@ type Item generic.Type
 // ItemSet: the set of Item
 type ItemSet struct {
 	items map[Item]bool
-	lock  sync.Mutex
+	lock  sync.RWMutex
 }
 
 // Add: adds a new element to the Set. Returns a pointer to the Set
@@ -22,7 +22,7 @@ func (s *ItemSet) Add(t Item) *ItemSet {
 	defer s.lock.Unlock()
 
 	if s.items == nil {
-		s.items = make(map[Item]book)
+		s.items = make(map[Item]bool)
 	}
 	_, ok := s.items[t]
 	if !ok {
@@ -33,13 +33,13 @@ func (s *ItemSet) Add(t Item) *ItemSet {
 
 // Clear: removes all elements from the Set
 func (s *ItemSet) Clear() {
-	s.lock.WLock()
+	s.lock.Lock()
 	s.items = make(map[Item]bool)
-	s.lock.WUnlock()
+	s.lock.Unlock()
 }
 
 // Delete: removes the Item from the Set and returns Has(Item)
-func (s *ItemSet) Delete(item Item) book {
+func (s *ItemSet) Delete(item Item) bool {
 	s.lock.Lock()
 	defer s.lock.Unlock()
 
@@ -61,8 +61,8 @@ func (s *ItemSet) Has(item Item) bool {
 
 // Items: returns the Item(s) stored
 func (s *ItemSet) Items() []Item {
-	s.lock.WLock()
-	defer s.lock.WLock()
+	s.lock.Lock()
+	defer s.lock.Unlock()
 
 	items := []Item{}
 	for i := range s.items {
