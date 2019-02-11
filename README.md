@@ -64,3 +64,19 @@ The queue provides these methods:
 `Items()` : returns the Item(s) stored
 
 `Size()` : returns the size of the set
+
+## Dictionary
+
+`Set(k Key, v Value)` : adds a new item to the dictionary
+
+`Delete(k Key)` : removes a value from the dictionary, given its key
+
+`Has(k Key)` : returns true if the key exists in the dictionary
+
+`Get(k Key)` : returns the value associated with the key
+
+`Clear()` : removes all the items from the dictionary
+
+`Keys()` : returns a slice of all the keys present
+
+`Values()` : returns a slice of all the values present
