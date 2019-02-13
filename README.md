@@ -6,6 +6,8 @@ The implementation of data structures (using Golang)
 - Queue
 - Stack
 - Set
+- Dictionary
+- Hash Table
 
 ## Linked List
 
@@ -80,3 +82,13 @@ The queue provides these methods:
 `Keys()` : returns a slice of all the keys present
 
 `Values()` : returns a slice of all the values present
+
+## Hash Table
+
+`Put(k Key, v Value)` : put item with value v and key k into the hashtable
+
+`Remove(k Key)` : remove item with key k from hashtable
+
+`Get(k Key)` : get item with key k from the hashtable
+
+`Size()` : returns the number of the hashtable elements
