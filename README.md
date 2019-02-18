@@ -9,6 +9,7 @@ The implementation of data structures (using Golang)
 - Dictionary
 - Hash Table
 - Binary Search Tree
+- graph
 
 ## Linked List
 
@@ -97,11 +98,27 @@ The queue provides these methods:
 ## Binary Search Tree
 
 `Insert(key int, value Item)` : inserts the Item t in the tree
+
 `Search(key int)` : returns true if the Item t exists in the tree
+
 `InOrderTraverse()` : visits all nodes with in-order traversing
+
 `PreOrderTraverse()` : visits all nodes with pre-order traversing
+
 `PostOrderTraverse()` : visits all nodes with post-order traversing
+
 `Min()` : returns the Item with min value stored in the tree
+
 `Max()` : returns the Item with max value stored in the tree
+
 `Remove(key int)` : removes the Item t from the tree
+
 `String()` : prints a CLI readable rendering of the tree
+
+## Graph
+
+`AddNode(n *Node)` : adds a node to the graph
+
+`AddEdge(n1, n2 *Node)` : adds an edge to the graph
+
+`String()` : prints a visual representation of the graph
